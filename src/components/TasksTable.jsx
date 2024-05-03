@@ -6,7 +6,7 @@ function TasksTable({
   const projects = useSelector((state)=> state.project.value);
   return (
     <div className='mx-4 bg-white p-4 rounded-md'>
-      <div className='grid grid-cols-5 my-2 border-b border-grayText'>
+      <div className='hidden sm:grid grid grid-cols-5 my-2 border-b border-grayText'>
         <div className='col-span-1 text-grayText'>Project name </div>
         <div className='col-span-1 text-grayText'>Task </div>
         <div className='col-span-1 text-grayText'>Status </div>
