@@ -20,10 +20,10 @@ function TasksTable({
         <div className='hidden sm:grid grid-cols-5 my-2' key={i}>
           <div className='col-span-1 text-xs md:text-sm ld:text-md'>{projects.find(project => task.userId == project._id).projectName}</div>
           <div className='col-span-1 text-xs md:text-sm ld:text-md'>{task.taskName}</div>
-          <div className='col-span-1 text-xs md:text-sm ld:text-md'>{(task.status == true ? "completed": "Not completed")}</div>
           {(task.priority == "High" ) ? <div className='bg-errorRed rounded-md text-center w-1/2 text-xs md:text-sm ld:text-md' >{task.priority}</div> : null}
           {(task.priority == "Med" ) ? <div className='bg-yellow rounded-md text-center w-1/2 text-xs md:text-sm ld:text-md' text-xs md:text-sm ld:text-md>{task.priority}</div> : null}
           {(task.priority == "Low" ) ? <div className='bg-green rounded-md text-center w-1/2 text-xs md:text-sm ld:text-md'>{task.priority}</div> : null}
+          <div className='col-span-1 text-xs md:text-sm ld:text-md'>{(task.status == true ? "completed": "Not completed")}</div>
           {/* <div className='col-span-1'>{task.priority}</div> */}
           <div className='col-span-1 text-xs md:text-sm ld:text-md'>{formattedDate}</div>
         </div>
